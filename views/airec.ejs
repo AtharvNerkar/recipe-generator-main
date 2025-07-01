@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Find a Recipe</h1>
+
+  <% if (messages.error && messages.error.length > 0) { %>
+    <div class="alert alert-danger">
+      <%= messages.error[0] %>
+    </div>
+  <% } %>
+
+  <form action="/search-recipe" method="POST">
+    <div class="form-group">
+      <label for="ingredients">Ingredients (comma-separated):</label>
+      <input type="text" class="form-control" id="ingredients" name="ingredients" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="cuisine">Cuisine:</label>
+      <input type="text" class="form-control" id="cuisine" name="cuisine" required>
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Get Recipe</button>
+  </form>
+  
+</div>

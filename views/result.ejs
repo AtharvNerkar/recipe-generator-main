@@ -1,0 +1,17 @@
+
+<div class="container">
+  <h1>Recipe Result</h1>
+
+  <% if (recipe) { %>
+    <div class="recipe">
+      <h2><%= recipe.title %></h2>
+      <img src="<%= recipe.image %>" alt="Recipe Image" class="img-fluid" />
+      <p><a href="https://spoonacular.com/recipes/<%= recipe.title.replace(/\s+/g, '-').toLowerCase() %>-<%= recipe.id %>" target="_blank">View Full Recipe</a></p>
+    </div>
+  <% } else { %>
+    <p>No recipe found for the given ingredients and cuisine.</p>
+  <% } %>
+
+  <a href="/" class="btn btn-secondary">Search Again</a>
+</div>
+
